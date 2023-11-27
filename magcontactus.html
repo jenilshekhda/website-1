@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	/* Center the loader */
+	#loader {
+	  /* position: absolute; */
+	  /* left: 50%;
+	  top: 50%;
+	  z-index: 1;
+	  width: 120px;
+	  height: 120px;
+	  margin: -76px 0 0 -76px;
+	  border: 16px solid #f3f3f3;
+	  border-radius: 50%;
+	  border-top: 16px solid #3498db;
+	  -webkit-animation: spin 2s linear infinite;
+	  animation: spin 2s linear infinite; */
+	}
+	.loader {
+--dim: 3rem;
+width: var(--dim);
+height: var(--dim);
+position: relative;
+animation: spin988 2s linear infinite;
+}
+
+.loader .circle {
+--color: #333;
+--dim: 1.2rem;
+width: var(--dim);
+height: var(--dim);
+background-color: var(--color);
+border-radius: 50%;
+position: absolute;
+}
+
+.loader .circle:nth-child(1) {
+top: 0;
+left: 0;
+}
+
+.loader .circle:nth-child(2) {
+top: 0;
+right: 0;
+}
+
+.loader .circle:nth-child(3) {
+bottom: 0;
+left: 0;
+}
+
+.loader .circle:nth-child(4) {
+bottom: 0;
+right: 0;
+}
+
+@keyframes spin988 {
+0% {
+transform: scale(1) rotate(0);
+}
+
+20%, 25% {
+transform: scale(1.3) rotate(90deg);
+}
+
+45%, 50% {
+transform: scale(1) rotate(180deg);
+}
+
+70%, 75% {
+transform: scale(1.3) rotate(270deg);
+}
+
+95%, 100% {
+transform: scale(1) rotate(360deg);
+}
+}
+	@-webkit-keyframes spin {
+	  0% { -webkit-transform: rotate(0deg); }
+	  100% { -webkit-transform: rotate(360deg); }
+	}
+	
+	@keyframes spin {
+	  0% { transform: rotate(0deg); }
+	  100% { transform: rotate(360deg); }
+	}
+	
+	/* Add animation to "page content" */
+	.animate-bottom {
+	  position: relative;
+	  -webkit-animation-name: animatebottom;
+	  -webkit-animation-duration: 1s;
+	  animation-name: animatebottom;
+	  animation-duration: 1s
+	}
+	
+	@-webkit-keyframes animatebottom {
+	  from { bottom:-100px; opacity:0 } 
+	  to { bottom:0px; opacity:1 }
+	}
+	
+	@keyframes animatebottom { 
+	  from{ bottom:-100px; opacity:0 } 
+	  to{ bottom:0; opacity:1 }
+	}
+	
+	#myDiv {
+	  display: none;
+	  text-align: center;
+	}
+
+	.loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 25px 75px rgba(0,0,0,0.55);
+  border: 1px solid #fac142;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  background: transparent;
+  border: 1px dashed #fac142;
+  border-radius: 50%;
+  box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
+  inset 5px 5px 35px rgba(0,0,0,0.25);
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px dashed #fac142;
+  box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
+  inset 5px 5px 35px rgba(0,0,0,0.25);
+}
+
+.loader span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  transform-origin: top left;
+  animation: radar82 2s linear infinite;
+  border-top: 1px dashed #fff;
+}
+
+.loader span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fac142;
+  transform-origin: top left;
+  transform: rotate(-55deg);
+  filter: blur(30px) drop-shadow(20px 20px 20px #fac142);
+}
+
+@keyframes radar82 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+	</style>
+	<title>div</title>
+
+<link rel="stylesheet" type="text/css" href="mymag.css">
+
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+	<div id="loader" style="position: relative;left:50%;top:300px;">
+		<div class="loader">
+			<span></span>
+		  </div>
+		  
+	</div>
+	
+	<div style="display:none;" id="myDiv" class="animate-bottom">
+
+<div class="h40 w100 bg1">
+	<div class="h40 w80 fl">
+		
+		<span class="ml50 mt10 fl" style="color:white"><i class="fa fa-clock-o" aria-hidden="true"></i>2023-09-30</span>
+		<span class="ml20 mt10 fl" style="color:white"><i class="fa fa-cloud" aria-hidden="true"></i>Bapunagar,Ahmedabad</span>
+	</div>
+    <div class="h40 w20 fl">
+    	 <span class="ml100  mt10 fl" style="color:white"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+     <span style="color:white" class=" ml10 mt10 fl"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+     <span style="color:white" class="ml10 mt10 fl"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+
+    </div>
+</div>
+
+<div class="box"> 
+
+
+	<div class="box1 fl"><img src="img/201.webp" height="60px" width="270px"></div>
+	<div class="box2 fl">
+		
+		<a href="index.html"> <span class="btn1"><b>HOME</b></span></a>
+		<a href="makblogpage.html"><span class="btn1">BLOG</span></a>
+		<a href="magshoplist.html"><span class="btn1">SHOP LIST</span></a>
+		<a href="magaccount.html"><span class="btn1">ACCOUNT</span></a>
+		<a href="magcart.html"><span class="btn1">CART</span></a>
+		<a href="magcheckout.html"><span class="btn1">CHECKOUT</span></a>
+		<a href="magaboutus.html"><span class="btn1">ABOUT US</span></a>
+		<a href="magcontactus.html"><span class="btn1">CONTACT US</span></a>
+		<span class="btn1"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+	</div>
+
+</div>
+
+<div class="h100 w100 bg1">
+	<div class="h40 w16 bgw1 cb fl " style="position:absolute;margin:0px 70px 0px 530px;margin-top:75px;box-shadow:1px 1px 1px 1px black;">
+		<span class="cb ml20 mt10 fl">Home |</span>
+		<span class="cb ml20 mt10 fl">contact us</span>
+		
+			</div>
+</div>
+
+<div class="h600 w100 mt20">
+<div class="h600 w70 fl">	
+	<h3 style="font-size:25px;">Contact Us</h3>
+	<p style="font-size:20px">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore <br> et dolore magna aliquyam erat, sed diam voluptua.</p>
+
+<div class="h100 w50 fl">
+	<form>
+  			<span>Name:</span><br>
+  			<input type="text" style="height:30px;width:90%">
+  			</form>
+</div>
+<div class="h100 w50  fl">
+	
+	<form>
+  			<span>Email address:</span><br>
+  			<input type="text" style="height:30px;width:90%">
+  		
+ 	</form>
+</div>
+
+<div class="h100 w100 fl">
+	
+	<form>
+           <span>Website:</span><br>
+  			<input type="text" style="height:30px;width:95%">
+               </form>
+</div>
+
+
+<div class="h200 w100  fl">
+	
+	<form>
+           <span>Your Message:</span><br>
+  			<input type="text" style="height:150px;width:95%">
+               </form>
+</div>
+<div class="h100 w100 fl">
+<button class="btn16">Send Message</button>
+</div>
+
+
+</div>
+
+<div class="h600 w30 fl">
+	<div class="h200 w100 fl">
+	<h3 style="font-size:25px">Contact Info</h3>
+  <p style="font-size:25px">Lorem ipsum dolor sit amet, consetetur sadipscing<br>elitr</p>
+</div> 
+
+<div style="height:50px;width: 20%;float: left;">
+	<button style="border-radius:100%;background-color:red;color:white;height:30px;width:40%;margin-left:20px;margin-top:10px;"><i class="fa fa-map-marker" aria-hidden="true"></i></button>
+</div>
+<div style="height:50px;width: 80%;float: left;">
+	<p style="font-size:25px;margin-left:20px;margin-top:10px;">Address</p>
+</div>
+
+<div style="height:50px;width: 20%;float: left;">
+
+	<button style="border-radius:100%;background-color:red;color:white;height:30px;width:40%;margin-left:20px;margin-top:10px;"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+</div>
+<div style="height:50px;width: 80%;float: left;">
+	<p style="font-size:25px;margin-left:20px;margin-top:10px;">[email protected]</p>
+</div>
+
+<div style="height:50px;width: 20%;float: left;">
+
+	<button style="border-radius:100%;background-color:red;color:white;height:30px;width:40%;margin-left:20px;margin-top:10px;"><i class="fa fa-phone" aria-hidden="true"></i></button>
+</div>
+<div style="height:50px;width: 80%;float: left;">
+	<p style="font-size:25px;margin-left:20px;margin-top:10px;">+123-45-6789</p>
+</div>
+
+<div style="height:50px;width: 20%;float: left;">
+
+	<button style="border-radius:100%;background:red;color:white;height:30px;width:40%;margin-left:20px;margin-top:10px;"><i class="fa fa-fax" aria-hidden="true"></i></button>
+</div>
+<div style="height:50px;width: 80%;float: left;">
+	<p style="font-size:25px;margin-left:20px;margin-top:10px;">+123-456-789</p>
+</div>
+
+<div style="height:50px;width: 20%;float: left;">
+
+	<button style="border-radius:100%;background:red;color:white;height:30px;width:40%;margin-left:20px;margin-top:10px;"><i class="fa fa-star" aria-hidden="true"></i></button>
+</div>
+<div style="height:50px;width: 80%;float: left;">
+	<p style="font-size:25px;margin-left:20px;margin-top:10px;">www.blogmag.com</p>
+</div>
+</div>
+
+</div>
+
+<div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7343.172017174743!2d72.630407!3d23.038968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e87e685016def%3A0x1af6abf970892863!2sHi-TECH%20Institute%20of%20Information%20Technology%20-%20Tally%20Prime%20With%20GST%20Training%20%7C%20Web%20Designing%20%7C%20Php%20Course%20%7C%20Software%20Courses!5e0!3m2!1sen!2sin!4v1697114397206!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+
+<div class="h700 w100 fl bgimg20">
+	<center>
+	<h2 class="h2 mt20">Find Us on Instagram</h3>
+		<hr style="width:23%">
+	</center>
+
+<div class="h150 w100 fl">
+	
+	<div class="h150 w16 bgm fl ml25">
+		<img src="img/footer2.jpg" height="150px" width="100%">
+	</div>
+
+	<div class="h150 w16 bgb fl">
+		<img src="img/footer1.jpg" height="150px" width="100%">
+	</div>
+
+	<div class="h150 w16 bgm fl">
+		<img src="img/footer3.jpg" height="150px" width="100%">
+	</div>
+
+	<div class="h150 w16 bgb fl">
+		<img src="img/footer4.jpg" height="150px" width="100%">
+	</div>
+
+	<div class="h150 w16 bgm fl">
+		<img src="img/footer2.jpg" height="150px" width="100%">
+	</div>
+
+	<div class="h150 w16 bgb fl">
+		<img src="img/footer3.jpg" height="150px" width="100%">
+	</div> 
+	
+</div>
+<div class="h350 w100 fl mt20">
+	<div class="h350 w30 fl" style="color:white">
+		<h2 class="ml20">NewMag</h2><hr style="width:90%"> 
+     
+     <p class="ml20">amet, consetetur sadipscing elitr, sed diam nonumy<br>eirmod tempor invidunt ut labore et dolore magna<br>aliquyam erat.</p>
+
+     <span class="ml20"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+     <span ><i class="fa fa-twitter" aria-hidden="true"></i></span>
+     <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+
+	</div>
+	<div class="h350 w20 fl" style="color:white">
+		<h2 class="ml20">Categories</h2>
+		<hr style="width:90%">
+		<p class="ml20">Entertainment</p>
+		<p class="ml20" >Sports</p>
+		<p class="ml20">Polictics</p>
+		<p class="ml20">National</p>
+          <p class="ml20">Blog</p>
+	</div>
+	<div class="h350 w20 fl" style="color:white">
+		<h2 class="ml20">Popular Tags</h2><hr style="width:90%">
+		
+		<p class="ml20">Entertainment</p>
+         <p class="ml20"> Sports</p>
+         <p class="ml20">Polictics</p>
+          <p class="ml20"> National</p>
+          <p class="ml20">International</p>
+  		
+	</div>
+
+	<div class="h350 w30 fl" style="color:white">
+		<h2 class="ml20">Newsletter</h2>
+		<hr style="width:90%">
+		<p class="ml20">Dont Miss Anything</p>
+		<p class="ml20">Subscribe to our #newsletter</p>
+
+		<input type="text" placeholder="enter email" class="ml20" style="height:20px;width:250px;"><button style="height:28px;width:40px;background:red;color:white;"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+	</div>
+</div>
+<div class="h100 w100 fl" style="color:white;margin-top:-75px;" >
+	<hr style="width:32%">
+	<center>
+	<h3>Copyright © 2023 <b style="color:red">Hi - Tech</b> - All Rights reserved</h3>
+    </center>
+    <hr style="width:32%">
+</div>
+
+</div>
+
+
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+
+
+</body>
+</html>

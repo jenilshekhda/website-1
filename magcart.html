@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		/* Center the loader */
+		#loader {
+		  /* position: absolute; */
+		  /* left: 50%;
+		  top: 50%;
+		  z-index: 1;
+		  width: 120px;
+		  height: 120px;
+		  margin: -76px 0 0 -76px;
+		  border: 16px solid #f3f3f3;
+		  border-radius: 50%;
+		  border-top: 16px solid #3498db;
+		  -webkit-animation: spin 2s linear infinite;
+		  animation: spin 2s linear infinite; */
+		}
+		.loader {
+  --dim: 3rem;
+  width: var(--dim);
+  height: var(--dim);
+  position: relative;
+  animation: spin988 2s linear infinite;
+}
+
+.loader .circle {
+  --color: #333;
+  --dim: 1.2rem;
+  width: var(--dim);
+  height: var(--dim);
+  background-color: var(--color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.loader .circle:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.loader .circle:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.loader .circle:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.loader .circle:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes spin988 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  20%, 25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+
+  45%, 50% {
+    transform: scale(1) rotate(180deg);
+  }
+
+  70%, 75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+
+  95%, 100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+		@-webkit-keyframes spin {
+		  0% { -webkit-transform: rotate(0deg); }
+		  100% { -webkit-transform: rotate(360deg); }
+		}
+		
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+		
+		/* Add animation to "page content" */
+		.animate-bottom {
+		  position: relative;
+		  -webkit-animation-name: animatebottom;
+		  -webkit-animation-duration: 1s;
+		  animation-name: animatebottom;
+		  animation-duration: 1s
+		}
+		
+		@-webkit-keyframes animatebottom {
+		  from { bottom:-100px; opacity:0 } 
+		  to { bottom:0px; opacity:1 }
+		}
+		
+		@keyframes animatebottom { 
+		  from{ bottom:-100px; opacity:0 } 
+		  to{ bottom:0; opacity:1 }
+		}
+		
+		#myDiv {
+		  display: none;
+		  text-align: center;
+		}
+
+		.loader {
+  width: 160px;
+  height: 160px;
+  color: #0000F4;
+  background: conic-gradient(from  165deg at top   ,#0000, currentColor 1deg 30deg,#0000 31deg) top,
+    conic-gradient(from   75deg at left  ,#0000, currentColor 1deg 30deg,#0000 31deg) left,
+    conic-gradient(from  -15deg at bottom,#0000, currentColor 1deg 30deg,#0000 31deg) bottom, 
+    conic-gradient(from -105deg at right ,#0000, currentColor 1deg 30deg,#0000 31deg) right;
+  background-size: 100% 50%,50% 100%;
+  -webkit-mask: radial-gradient(circle 10px,#0000 90%,#000);
+  background-repeat: no-repeat;
+  animation: sh1 1.5s infinite linear;
+}
+
+@keyframes sh1 {
+ 
+  100% {
+    transform: rotate(1turn)
+  }
+}
+  
+
+		</style>
+	<title>div</title>
+
+	
+	<link rel="stylesheet" type="text/css" href="mymag.css">
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+	<div id="loader" style="position: relative;left:50%;top:300px;">
+		<div class="loader">
+			<div class="loader"></div>
+		</div>
+		
+	</div>
+	
+	<div style="display:none;" id="myDiv" class="animate-bottom">
+
+<div class="h40 w100 bg1">
+	<div class="h40 w80 fl">
+		
+		<span class="ml50 mt10 fl" style="color:white"><i class="fa fa-clock-o" aria-hidden="true"></i>2023-09-30</span>
+		<span class="ml20 mt10 fl" style="color:white"><i class="fa fa-cloud" aria-hidden="true"></i>Bapunagar,Ahmedabad</span>
+	</div>
+    <div class="h40 w20 fl">
+    	 <span class="ml100  mt10 fl" style="color:white"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+     <span style="color:white" class=" ml10 mt10 fl"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+     <span style="color:white" class="ml10 mt10 fl"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+
+    </div>
+</div>
+
+<div class="box"> 
+
+
+	<div class="box1 fl"><img src="img/201.webp" height="60px" width="270px"></div>
+	<div class="box2 fl">
+		
+		<a href="index.html"> <span class="btn1"><b>HOME</b></span></a>
+		<a href="makblogpage.html"><span class="btn1">BLOG</span></a>
+		<a href="magshoplist.html"><span class="btn1">SHOP LIST</span></a>
+		<a href="magaccount.html"><span class="btn1">ACCOUNT</span></a>
+		<a href="magcart.html"><span class="btn1">CART</span></a>
+		<a href="magcheckout.html"><span class="btn1">CHECKOUT</span></a>
+		<a href="magaboutus.html"><span class="btn1">ABOUT US</span></a>
+		<a href="magcontactus.html"><span class="btn1">CONTACT US</span></a>
+		<span class="btn1"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+	</div>
+
+</div>
+
+<div class="h100 w100 bg1">
+	<div class="h40 w16 bgw1 cb fl " style="position:absolute;margin:0px 70px 0px 530px;margin-top:75px;box-shadow:1px 1px 1px 1px black;">
+		<span class="cb ml20 mt10 fl">Home |</span>
+		<span class="cb ml20 mt10 fl">Shop|</span>
+		<span class="cb ml20 mt10 fl">Cart</span>
+		
+			</div>
+</div>
+
+<div class="h200 w100 mt20">
+
+<table border="1px solid silver" class="w100">
+	
+<tr>
+	<th style="height:50px;width:100px;"></th>
+	<th style="height:50px;width:100px;">Product</th>
+	<th style="height:50px;width:100px;">Price</th>
+	<th style="height:50px;width:100px;">Quantity</th>
+	<th style="height:50px;width:100px;">Total</th>
+	
+</tr>
+
+<tr>
+	<th style="height:50px;width:100px;">*</th>
+	<th style="height:50px;width:100px;">Wall Color</th>
+	<th style="height:50px;width:100px;">$329.00</th>
+	<th style="height:50px;width:100px;"><input type="text" placeholder="NO"></th>
+	<th style="height:50px;width:100px;">$329.00</th>
+	
+</tr>
+
+<tr>
+	<th style="height:50px;width:100px;">Coupon:</th>
+     <th><input type="text" placeholder="Coupon Code:" style="height:25px;width:200px"></th>
+     <th><button class="btn13">Apply Coupon</button></th>
+      <th><button style="height:40px;width:105px;background:#f75656;color:white;cursor: no-drop;">Upadate Cart</button></th>
+     
+</tr>
+
+</table>	
+</div>
+ <div class="h500 w100">
+ 	<div class="h500 w100 ">
+
+ 	<h2>Cart Totals</h2>
+ 	<hr>
+ 
+
+<div class="h300 w100 fl">
+
+<table border="1px solid silver">
+	
+<tr>
+	 <td style="height:50px;width:100px;">Product</td>
+	  <td style="height:50px;width:90%;">Total</td>
+</tr>
+
+<tr>
+	 <td style="height:50px;width:100px;">Wall Color  × 1</td>
+	  <td style="height:50px;width:90%;">$329.00</td>
+</tr>
+
+<tr>
+	 <td style="height:50px;width:100px;">Subtotal</td>
+	  <td style="height:50px;width:90%;">$329.00</td>
+</tr>
+
+<tr>
+	 <td style="height:50px;width:100px;">Shipping</td>
+	  <td style="height:50px;width:90%;">Enter your address to view shipping options.</td>
+</tr>
+
+
+<tr>
+	 <td style="height:50px;width:100px;">Total</td>
+	  <td style="height:50px;width:90%;">$329.00</td>
+	 
+</tr>
+
+</table>
+<p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+
+
+<button style="height:40px;width:150px;background:#f75656;color:white;border-radius:10px ;">Proceed To Checkout</button>
+
+</div>
+</div>
+ </div>
+
+<div class="h700 w100 fl bgimg20">
+	<center>
+	<h2 class="h2 mt20">Find Us on Instagram</h3>
+		<hr style="width:23%">
+	</center>
+
+<div class="h150 w100 fl">
+	
+	<div class="h150 w16 bgm fl ml25">
+		<img src="img/footer2.jpg" height="150px" width="100%">
+	</div>
+
+	<div class="h150 w16 bgb fl">
+		<img src="img/footer1.jpg" height="150px" width="100%">
+	</div>
+
+	<div class="h150 w16 bgm fl">
+		<img src="img/footer3.jpg" height="150px" width="100%">
+	</div>
+
+	<div class="h150 w16 bgb fl">
+		<img src="img/footer4.jpg" height="150px" width="100%">
+	</div>
+
+	<div class="h150 w16 bgm fl">
+		<img src="img/footer2.jpg" height="150px" width="100%">
+	</div>
+
+	<div class="h150 w16 bgb fl">
+		<img src="img/footer3.jpg" height="150px" width="100%">
+	</div> 
+	
+</div>
+<div class="h350 w100 fl mt20">
+	<div class="h350 w30 fl" style="color:white">
+		<h2 class="ml20">NewMag</h2><hr style="width:90%"> 
+     
+     <p class="ml20">amet, consetetur sadipscing elitr, sed diam nonumy<br>eirmod tempor invidunt ut labore et dolore magna<br>aliquyam erat.</p>
+
+     <span class="ml20"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+     <span ><i class="fa fa-twitter" aria-hidden="true"></i></span>
+     <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+
+	</div>
+	<div class="h350 w20 fl" style="color:white">
+		<h2 class="ml20">Categories</h2>
+		<hr style="width:90%">
+		<p class="ml20">Entertainment</p>
+		<p class="ml20" >Sports</p>
+		<p class="ml20">Polictics</p>
+		<p class="ml20">National</p>
+          <p class="ml20">Blog</p>
+	</div>
+	<div class="h350 w20 fl" style="color:white">
+		<h2 class="ml20">Popular Tags</h2><hr style="width:90%">
+		
+		<p class="ml20">Entertainment</p>
+         <p class="ml20"> Sports</p>
+         <p class="ml20">Polictics</p>
+          <p class="ml20"> National</p>
+          <p class="ml20">International</p>
+  		
+	</div>
+
+	<div class="h350 w30 fl" style="color:white">
+		<h2 class="ml20">Newsletter</h2>
+		<hr style="width:90%">
+		<p class="ml20">Dont Miss Anything</p>
+		<p class="ml20">Subscribe to our #newsletter</p>
+
+		<input type="text" placeholder="enter email" class="ml20" style="height:20px;width:250px;"><button style="height:28px;width:40px;background:red;color:white;"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+	</div>
+</div>
+<div class="h100 w100 fl" style="color:white;margin-top:-75px;" >
+	<hr style="width:32%">
+	<center>
+	<h3>Copyright © 2023 <b style="color:red">Hi - Tech</b> - All Rights reserved</h3>
+    </center>
+    <hr style="width:32%">
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+
+
+</body>
+</html>
